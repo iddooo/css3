@@ -1,5 +1,5 @@
 # css3
-<img src="bg.png" />
+<img src="./images/bg.png" />
 ##背景动画
 
 ```HTML
