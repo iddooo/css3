@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -999;
+        }
+
+        .row1 .c1,
+        .row1 .c2,
+        .row1 .c3,
+        .row1 .c4 {
+            width: 60px;
+            height: 60px;
+        }
+
+        .row1 .c1 {
+            left: 3%;
+            top: 10%;
+        }
+
+        .row1 .c2 {
+            left: 36%;
+            top: 12%;
+        }
+
+        .row1 .c3 {
+            left: 80%;
+            top: 2%;
+        }
+
+        .row1 .c4 {
+            left: -50%;
+            top: 15%;
+        }
+
+        .row2 .c1,
+        .row2 .c2,
+        .row2 .c3 {
+            width: 180px;
+            height: 180px;
+        }
+
+        .row2 .c1 {
+            left: -15%;
+            top: 20%;
+        }
+
+        .row2 .c2 {
+            left: 50%;
+            top: 20%;
+        }
+
+        .row2 .c3 {
+            left: 80%;
+            top: 40%;
+        }
+
+        .row3 .c1,
+        .row3 .c2,
+        .row3 .c3 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .row3 .c1 {
+            left: 10%;
+            top: 48%;
+        }
+
+        .row3 .c2 {
+            left: 43%;
+            top: 38%;
+        }
+
+        .row3 .c3 {
+            left: 90%;
+            top: 56%;
+        }
+
+        .row1 div,
+        .row2 div,
+        .row3 div {
+            position: absolute;
+            background: linear-gradient(to right, #fff, #dedede);
+            border-radius: 50%;
+
+        }
+
+        .row1 div {
+            animation: cmove 100s linear infinite;
+        }
+
+        .row2 div {
+            animation: cmove 80s linear infinite;
+        }
+
+        .row3 div {
+            animation: cmove 50s linear infinite;
+        }
+
+        @keyframes cmove {
+            form {
+                transform: translateX(0) rotate(0)
+            }
+            to {
+                transform: translateX(-1000px) rotate(-3600deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="row1">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+        </div>
+        <div class="row2">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+        </div>
+        <div class="row3">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+        </div>
+    </div>
+</body>
+
+</html>
