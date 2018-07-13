@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+        body{
+            background-color: #2B3A42;
+        }
+        .logo {
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(-60deg);
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .inner,
+        .outer {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            position: absolute;
+        }
+
+        .inner {
+            animation: rota1 2s linear infinite;
+        }
+
+        .outer {
+            animation: rota2 2s linear infinite;
+            
+        }
+
+        @keyframes rota1 {
+            50% {
+                transform: rotateY(90deg)
+            }
+            100% {
+                transform: rotateY(90deg)
+            }
+        }
+
+        @keyframes rota2 {
+            50% {
+                transform: rotateY(-90deg)
+            }
+            100% {
+                transform: rotateY(-90deg)
+            }
+        }
+
+        .inner li,
+        .outer li {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+        .inner li {
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            margin-top: -25px;
+            background: #1D78C1;
+            border: 1px solid #fff;
+            
+        }
+
+        .outer li {
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            margin-top: -50px;
+            background: rgba(141, 214, 249, 0.5);
+            border: 2px solid #fff;
+            
+        }
+
+        .inner .top {
+            transform: translateY(-25px) rotateX(90deg)
+        }
+
+        .inner .bottom {
+            transform: translateY(25px) rotateX(90deg)
+        }
+
+        .inner .left {
+            transform: translateX(-25px) rotateY(90deg)
+        }
+
+        .inner .right {
+            transform: translateX(25px) rotateY(90deg)
+        }
+
+        .inner .front {
+            transform: translateZ(25px)
+        }
+
+        .inner .back {
+            transform: translateZ(-25px)
+        }
+
+        .outer .top {
+            transform: translateY(-50px) rotateX(90deg)
+        }
+
+        .outer .bottom {
+            transform: translateY(50px) rotateX(90deg)
+        }
+
+        .outer .left {
+            transform: translateX(-50px) rotateY(90deg)
+        }
+
+        .outer .right {
+            transform: translateX(50px) rotateY(90deg)
+        }
+
+        .outer .front {
+            transform: translateZ(50px)
+        }
+
+        .outer .back {
+            transform: translateZ(-50px)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <ul class="inner">
+            <li class="top"></li>
+            <li class="bottom"></li>
+            <li class="left"></li>
+            <li class="right"></li>
+            <li class="front"></li>
+            <li class="back"></li>
+        </ul>
+        <ul class="outer">
+            <li class="top"></li>
+            <li class="bottom"></li>
+            <li class="left"></li>
+            <li class="right"></li>
+            <li class="front"></li>
+            <li class="back"></li>
+        </ul>
+    </div>
+</body>
+
+</html>
